@@ -1,5 +1,8 @@
 # Agentic AI Water Distribution Leak Detection & Resource Optimization
 
+Live backend: https://water-leak-ai-j7h6.onrender.com
+Live frontend: https://YOUR-VERCEL-URL.vercel.app
+
 Decision-support prototype for a water utility. It never operates pumps or valves; every action needs operator approval.
 
 ## 1. Problem and use case
@@ -54,4 +57,4 @@ SQLite (`app/db.py`): `leaks` (current hypotheses) and `events` (audit trail). P
 `pytest` runs 12 automated tests. `docs/TEST_CASES.md` documents TC-01 to TC-08 (input, expected, actual, agents, forecast metrics, evidence, final state, pass/fail).
 
 ## 10. Known limitations
-Simplified water balance; simulated data; synthetic map coordinates; single-file HTML frontend (React/TypeScript planned); no authentication; not deployed yet.
+Simplified water balance; simulated data; synthetic map coordinates; single-page HTML dashboard frontend (no React/TypeScript); free-tier hosting (backend sleeps when idle, SQLite resets on restart); no authentication.
