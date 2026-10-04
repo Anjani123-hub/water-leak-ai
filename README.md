@@ -48,6 +48,11 @@ python -m scripts.gen_test_report   # regenerates docs/TEST_CASES.md
 ```
 No environment variables are required. Optional: `WATER_DB` (SQLite path, default `water.db`).
 
+## 6b. Frontend (React + TypeScript + Tailwind + Recharts + Leaflet)
+13 pages in `frontend/src/App.tsx`: Water Operations Dashboard, Network Configuration, Live Network Map, Sensor Monitoring, Demand Forecasting, Leak Detection Center, Pressure & Flow Analytics, Water Balance, Field Operations, Maintenance Planning, AI Operations Center, Alert Center, Reports.
+cd frontend && npm install && npm run dev    # http://localhost:5173 (backend on :8000)
+Production: Vercel (root directory `frontend`). Backend URL is set in App.tsx.
+
 ## 7. API
 `GET /api/run?scenario=` | `GET /api/reassess` | `POST /api/upload` | `GET /api/sample.csv` | `GET /api/report.pdf` | `GET /api/network` | `POST /api/approve/{leak}/{team}` | `POST /api/repair/{leak}` | `POST /api/teams/{id}` | `GET /api/state` | `GET /api/history`
 
@@ -58,4 +63,4 @@ SQLite (`app/db.py`): `leaks` (current hypotheses) and `events` (audit trail). P
 `pytest` runs 12 automated tests. `docs/TEST_CASES.md` documents TC-01 to TC-08 (input, expected, actual, agents, forecast metrics, evidence, final state, pass/fail).
 
 ## 10. Known limitations
-Simplified water balance; simulated data; synthetic map coordinates; single-page HTML dashboard frontend (no React/TypeScript); free-tier hosting (backend sleeps when idle, SQLite resets on restart); no authentication.
+Simplified water balance; simulated data; synthetic map coordinates;  free-tier hosting (backend sleeps when idle, SQLite resets on restart); no authentication.
