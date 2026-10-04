@@ -1,7 +1,7 @@
 # Agentic AI Water Distribution Leak Detection & Resource Optimization
 
 Live backend: https://water-leak-ai-j7h6.onrender.com
-Live frontend: https://YOUR-VERCEL-URL.vercel.app
+Live frontend: https://water-leak-ai-frontend-8nkb627vd-anjani123-hub.vercel.app/
 
 Decision-support prototype for a water utility. It never operates pumps or valves; every action needs operator approval.
 
@@ -9,6 +9,7 @@ Decision-support prototype for a water utility. It never operates pumps or valve
 Non-Revenue Water from leaks and bursts is hard to find with fixed thresholds. The system watches flow and pressure per District Metered Area (DMA), forecasts expected demand, and builds explainable leak hypotheses. Example: DMA-B inlet 510 m3/h vs 390 expected is NOT declared a leak until pressure, night flow and sensor health are checked.
 
 ## 2. Architecture
+![Architecture diagram](docs/architecture.svg)
 Sensor data -> Agent 1 validation -> Agent 2 forecast -> Agent 3 anomalies -> Agent 4 leak + localization -> Agent 5 water balance -> Agent 6 maintenance -> Agent 8 reviewer -> Agent 7 coordinator -> human approval -> post-repair validation.
 
 ## 3. Multi-agent design
